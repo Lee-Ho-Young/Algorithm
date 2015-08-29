@@ -1,12 +1,13 @@
-import java.awt.*;
-import java.applet.*;
 
-public class HelloApplet extends Applet
+public class HelloApplet 
 {
 	
-	public void paint(Graphics g)
+	public static void main(String[] args)
 	{
-		g.drawString("Hello, Applet!", 50, 100);
+		byte byte1 = 10;
+		byte byte2 = 20;
+		byte byte3 = (byte)(byte1 + byte2);
+		System.out.println(byte3);
 	}
 
 }
