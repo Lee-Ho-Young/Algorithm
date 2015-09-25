@@ -1,3 +1,4 @@
+import java.util.EmptyStackException;
 import java.util.Stack;
 import java.util.Scanner;
 
@@ -23,32 +24,52 @@ public class MismatchedBrackets
 			String brackets = scanner.nextLine();
 			int index = 0;
 			boolean flag = true;
+			char temp;
 			Stack<Character> stack = new Stack<Character>();
 		
 			while(index <= (brackets.length()-1)) //index starts from 0
 			{
+				
 				if(brackets.charAt(index) == ')')
 				{
-					if(stack.pop() != '(')
+					try{
+						if(stack.pop() != '(')
+						{
+							flag = false;
+							break;
+						}
+					}
+					catch(EmptyStackException e)
 					{
 						flag = false;
-						break;
 					}
 				}
 				else if(brackets.charAt(index) == '}')
 				{
-					if(stack.pop() != '{')
+					try{
+						if(stack.pop() != '{')
+						{
+							flag = false;
+							break;
+						}
+					}
+					catch(EmptyStackException e)
 					{
 						flag = false;
-						break;
 					}
 				}
 				else if(brackets.charAt(index) == ']')
-				{
-					if(stack.pop() != '[')
+				{	
+					try{
+						if(stack.pop() != '[')
+						{
+							flag = false;
+							break;
+						}
+					}
+					catch(EmptyStackException e)
 					{
 						flag = false;
-						break;
 					}
 				}
 				else
