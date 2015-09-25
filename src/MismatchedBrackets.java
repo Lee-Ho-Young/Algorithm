@@ -64,7 +64,6 @@ public class MismatchedBrackets
 			else
 				System.out.println("No");
 		
-		}
-		System.out.println("The end of Program");	
+		}	
 	}
 }
