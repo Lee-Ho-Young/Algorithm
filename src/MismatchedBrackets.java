@@ -11,7 +11,7 @@ public class MismatchedBrackets
 		count = Integer.parseInt(scanner.nextLine()); // store the number of test
 		
 		
-		if(count >= 1){} //if count value is valid then, do nothing
+		if(count >= 1 && count <= 100){} //if count value is valid then, do nothing
 		else
 		{
 			System.out.println("Wrong input");
@@ -25,7 +25,6 @@ public class MismatchedBrackets
 			String brackets = scanner.nextLine();
 			int index = 0;
 			boolean flag = true;
-			char temp;
 			Stack<Character> stack = new Stack<Character>();
 		
 			while(index <= (brackets.length()-1)) //index starts from 0
