@@ -10,6 +10,7 @@ public class MismatchedBrackets
 		int count; // counting the test cases
 		count = Integer.parseInt(scanner.nextLine()); // store the number of test
 		
+		
 		if(count >= 1){} //if count value is valid then, do nothing
 		else
 		{
@@ -79,6 +80,9 @@ public class MismatchedBrackets
 				
 				index++;			
 			}
+			
+			if(!stack.empty())
+				flag = false;
 			
 			if(flag)
 				System.out.println("Yes");	
