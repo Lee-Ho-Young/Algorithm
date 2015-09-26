@@ -7,29 +7,20 @@ public class MismatchedBrackets
 	public static void main(String args[])
 	{
 		Scanner scanner = new Scanner(System.in);
-		int count; // counting the test cases
-		count = Integer.parseInt(scanner.nextLine()); // store the number of test
-		
-		
-		if(count >= 1 && count <= 100){} //if count value is valid then, do nothing
-		else
-		{
-			System.out.println("Wrong input");
-			return;
-		}
-			
-		while(count > 0)
-		{
-			count--;
-			
+		int count = Integer.parseInt(scanner.nextLine()); // store the number of test
+				
+		while(count-- > 0)
+		{	
 			String brackets = scanner.nextLine();
+			
+			long before = System.currentTimeMillis(); // for time measure
+			
 			int index = 0;
 			boolean flag = true;
 			Stack<Character> stack = new Stack<Character>();
 		
-			while(index <= (brackets.length()-1)) //index starts from 0
+			while(index < (brackets.length())) //index starts from 0
 			{
-				
 				if(brackets.charAt(index) == ')')
 				{
 					try{
@@ -77,17 +68,19 @@ public class MismatchedBrackets
 					stack.push(brackets.charAt(index));
 				}
 				
-				index++;			
+				index++;
 			}
-			
-			if(!stack.empty())
-				flag = false;
-			
-			if(flag)
-				System.out.println("Yes");	
+		
+			if(stack.empty() && flag)
+				System.out.println("Yes");
 			else
 				System.out.println("No");
+			
+			long after = System.currentTimeMillis();
+			long processingTime = after - before;
+			System.out.println("Time elapsed : " + processingTime + " ms");
 		
 		}	
+		
 	}
 }
