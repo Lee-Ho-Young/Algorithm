@@ -65,7 +65,7 @@ public class Boggle {
 	public static boolean hasWord(int i, int j, String word) {
 		
 		//System.out.println("Log1 " + i + " " + j + " " + word);
-		if(i<0 || i>4 || j<0 || j>4) 
+		if(i<0 || j<0 || i>4 || j>4) 
 			return false;
 		
 		if(boggle[i][j] != word.charAt(0)) 
