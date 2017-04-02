@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Boggle {
+public class Boggle1 {
 	
 	static char[][] boggle = new char[5][5];
 	static int[] xValue = {-1, 0, 1, 1, 1, 0, -1, -1};
