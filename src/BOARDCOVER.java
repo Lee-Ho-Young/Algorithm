@@ -11,7 +11,6 @@ public class BOARDCOVER {
 	
 	public static void main(String[] args) throws FileNotFoundException {
 		
-		
 		//File file = new File("C:/Develop/workspace/Algorithm/resource/boardCoverExample.txt");
 		//Scanner sc = new Scanner(file);
 		
@@ -29,12 +28,9 @@ public class BOARDCOVER {
 			for(int i=0; i<row; i++) {
 				String oneRow = sc.nextLine();
 				
-				for(int j=0; j<col; j++) {
-					if(oneRow.charAt(j) == '#') {
+				for(int j=0; j<col; j++) 
+					if(oneRow.charAt(j) == '#') 
 						board[i][j] = true; //이미 채워진 칸을  true세팅
-					}
-				}
-			}
 			
 			int result = 0; // 알고리즘의 최종 결과
 			int count = 0; // 블록이 들어갈 수 있는 칸의 갯수
