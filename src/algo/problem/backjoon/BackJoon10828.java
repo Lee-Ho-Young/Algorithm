@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
+//정답 제출 시 클래스명은 Main, 패키지경로를 삭제해 주어야 한다.
 public class BackJoon10828 {
 
 	public static int[] stack;
